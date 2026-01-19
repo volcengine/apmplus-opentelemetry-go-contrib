@@ -1,0 +1,7 @@
+server:
+  app: test
+  server: trpc-helloworld-client
+
+client:
+  filter:
+    - apmplus

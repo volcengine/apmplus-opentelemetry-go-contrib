@@ -1,0 +1,9 @@
+server:
+  app: test
+  server: trpc-helloworld-server
+  service:
+    - name: trpc.helloworld
+      ip: 127.0.0.1
+      port: 8001
+  filter:
+    - apmplus         # server filter
