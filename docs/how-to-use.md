@@ -2,7 +2,7 @@
 
 ### 1. Init OTel SDK
 
-Refer to the official OpenTelemetry manual [Getting-Started](https://opentelemetry.io/docs/languages/go/getting-started/). Or you can also refer to the following code [example](../instrumentation/trpc.group/trpc-go/oteltrpc/example/otel.go)
+Refer to the official OpenTelemetry manual [Getting-Started](https://opentelemetry.io/docs/languages/go/getting-started/). Or you can also refer to the following code [example](../instrumentation/trpc.group/trpc-go/oteltrpc/example/otel.go).
 
 ### 2. Use APMPlus Library package
 
@@ -27,7 +27,7 @@ server:
     - apmplus         # add apmplus filter
 ```
 
-### 4. Configure otel sdk
+### 3. Configure otel sdk
 
 | Environment                 | Description                                                                         |
 |-----------------------------|-------------------------------------------------------------------------------------|
