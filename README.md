@@ -17,6 +17,10 @@ This project is an official Go SDK extension package provided by APMPlus, design
 |----------------------------------------------------|---------| ------ |
 | [trpc](instrumentation/trpc.group/trpc-go/oteltrpc) | ✓ | ✓ |
 
+## Security and privacy
+This project takes security seriously.
+For vulnerability reporting and supported versions, see [SECURITY.md](SECURITY.md).
+
 ## License
 
 This project is licensed under the [Apache-2.0 License](LICENSE). 

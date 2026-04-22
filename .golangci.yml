@@ -1,20 +1,23 @@
-run:
-  skip-dirs-use-default: true
-  skip-dirs:
-    - conf
-    - mock
-    - test
-    - tests
-    - clients
-    - example
-  skip-files:
-    - ".*\\.generated\\.go$"
-    - ".*\\.gen\\.go$"
-    - ".*\\.mock\\.go$"
-    - ".*\\.thrift\\.go$"
+version: "2"
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
 
 linters:
-  disable-all: true
+  exclusions:
+    paths:
+      - conf
+      - mock
+      - test
+      - tests
+      - clients
+      - example
+      - ".*\\.generated\\.go$"
+      - ".*\\.gen\\.go$"
+      - ".*\\.mock\\.go$"
+      - ".*\\.thrift\\.go$"
   enable:
     - bodyclose     # checks whether HTTP response body is closed successfully
     - errcheck      # checking for unchecked errors in go programs
@@ -23,14 +26,6 @@ linters:
     - unparam       # finds unused function parameters
     - goconst       # finds repeated strings that could be replaced by a constant
     - govet         # examines Go source code and reports suspicious constructs
-    - gofmt         # checks whether code was gofmt-ed
-    - goimports     # does everything that gofmt does, additionally it checks unused imports
-    - gosimple      # for Go source code that specializes in simplifying a code
     - ineffassign   # detects when assignments to existing variables are not used
-    - typecheck     # parses and type-checks Go code
     - dogsled       # for Go source code that specializes in simplifying a code
-    - exportloopref # checks for pointers to enclosing loop variables
     - misspell      # finds commonly misspelled English words in comments
-
-issues:
-  exclude-use-default: true
