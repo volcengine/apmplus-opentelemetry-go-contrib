@@ -7,7 +7,7 @@ on:
 
 env:
   GO_VERSION: 1.22
-  GOLANGCI_LINT_VERSION: v2.6
+  GOLANGCI_LINT_VERSION: v2.11.4
 
 jobs:
   detect-modules:
@@ -58,7 +58,7 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
           cache: true
       - name: golangci-lint ${{ matrix.modules }}
-        uses: golangci/golangci-lint-action@v6
+        uses: golangci/golangci-lint-action@v7
         with:
           version: ${{ env.GOLANGCI_LINT_VERSION }}
           working-directory: ${{ matrix.modules }}
